@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/x-icon" href="https://production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico"/>
+  <link rel="mask-icon" type="" href="https://production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
+  <title>CodePen - Splash background image with text</title>
+  
+  
+  
+  
+      <style>
+      @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+html, body {
+width: 100%;
+height: auto;
+}
+
+body { 
+font: normal 2em/2.5em "Open Sans", Arial, Verdana,sans-serif; 
+color: #333; 
+}
+.button {
+  padding: 10px 17px;
+  background:transparent;
+  color:#fff;
+  border: 2px solid white;
+  font-size: 18px;
+}
+
+.button:hover {
+  background: #34344A;
+  color: white;
+  transition: all .3s ease-in-out;
+}
+.fade-in {
+    opacity:0;
+    -webkit-animation:fadeIn ease-in 1; 
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode:forwards;  
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:0.3s;
+    -moz-animation-duration:0.3s;
+    animation-duration:0.3s;
+
+    -webkit-animation-delay: 0.5s;
+    -moz-animation-delay: 0.5s;
+    animation-delay: 0.5s; /*delay before the background-image appears*/
+}
+.splash {
+background: url('http://media.architecturaldigest.com/photos/5699802bc6772b7614567435/2:1/w_2560/new-york-city-guide.jpg') center center;
+     background-size: cover;
+     background-attachment: fixed;
+     position: absolute;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     min-height: 360px;
+     z-index: 999;
+     text-align: center;
+ }
+
+.splash-title { 
+    color:#34344A;
+    font-size: 10em;
+    margin-top: 200px;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    animation-delay: 1s; /*delay before the title appears*/
+    text-decoration: underline;
+}
+
+    </style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+</head>
+
+<body translate="no" >
+
+    <div class="splash fade-in">
+  <h1 class="splash-title fade-in ">TODAY</h1>
+  <a class="button" href="index.html">ENTER</a>
+</div> <!-- END .splash -->
+    <script src="//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js"></script>
+
+  
+
+  
+  
+
+</body>
+</html>
+ 
